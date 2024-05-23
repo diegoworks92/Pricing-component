@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn("bg-gray-100", font.className)}>{children}</body>
+      <body className={cn("bg-gray-100 p-5", font.className)}>{children}</body>
     </html>
   );
 }

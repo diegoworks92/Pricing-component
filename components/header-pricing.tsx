@@ -12,13 +12,18 @@ const HeaderPricing = ({
   onClickYearly,
 }: HeaderPricingProps) => {
   return (
-    <ul className="p-2 bg-gray-950 text-white flex items-center gap-2 rounded-full">
+    <ul
+      className={cn(
+        "relative p-2 bg-gray-950 text-white flex items-center rounded-full before:absolute before:top-8 before:w-1/2 before:h-[86%] before:-translate-y-1/2 before:bg-primary before:rounded-full transition-all duration-300 before:transition-all before:duration-300",
+        plan === "monthly" ? "before:left-1" : "before:left-[84px]"
+      )}
+    >
       <li>
         <button
           onClick={onClickMonthly}
           className={cn(
-            "py-2 px-4 rounded-full",
-            plan === "monthly" && "bg-primary"
+            "w-20 h-12 rounded-full relative z-10",
+            plan === "monthly" && ""
           )}
         >
           Monthly
@@ -28,8 +33,8 @@ const HeaderPricing = ({
         <button
           onClick={onClickYearly}
           className={cn(
-            "py-2 px-4 rounded-full",
-            plan === "yearly" && "bg-primary"
+            "w-20 h-12 rounded-full relative z-10",
+            plan === "yearly" && ""
           )}
         >
           Yearly
