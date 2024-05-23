@@ -16,7 +16,7 @@ const ListPricing = ({ plan }: ListPricingProps) => {
         <PricingCard
           plan="Basic"
           price={plan === "monthly" ? 240 : 190}
-          description="Best for persona use"
+          description="Best for personal use"
           features={featuresBasic}
         />
       </li>
@@ -26,7 +26,8 @@ const ListPricing = ({ plan }: ListPricingProps) => {
           price={plan === "monthly" ? 360 : 260}
           description="Best for professionals"
           features={featuresAdvanced}
-          active
+          /* active */
+          offer
         />
       </li>
       <li>

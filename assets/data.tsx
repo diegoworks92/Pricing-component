@@ -8,11 +8,11 @@ export const featuresBasic = [
     include: true,
   },
   {
-    feature: "Basic costumer support",
+    feature: "Basic customer support",
     include: true,
   },
   {
-    feature: "Costumizable permissions",
+    feature: "Customizable permissions",
     include: false,
   },
   {
